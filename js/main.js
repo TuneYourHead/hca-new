@@ -6,7 +6,7 @@ $( document ).ready(function(){
       easing: "easeOutExpo",
       setHeights: false,
       updateHash: false,
-      scrollSpeed: 1000,
+      scrollSpeed: 600,
       offset : 0,
       overflowScroll: true,
       before:function() {},

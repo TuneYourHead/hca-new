@@ -1,6 +1,7 @@
 .what-we-do
   padding: 0 $global-padding
   color: $white
+  text-shadow: 3px 3px 3px rgba(0,0,0,.35)
 
 .what-we-do_main
   display: flex
@@ -13,9 +14,9 @@
   height: calc(100vh - 40px)
   max-height: 900px
   display: flex
-  justify-content: space-around
+  justify-content: space-between
   flex-direction: column
-  padding: 10% $global-padding*4 $global-padding
+  padding: 10% $global-padding
   margin-top: $global-padding
   background:
     size: cover
@@ -26,8 +27,22 @@
   &:nth-of-type(2)
     background-image: $gradient, url('../images/what-we-do-bg-2.jpg')
 
+.what-we-do_main-title
+  text-transform: uppercase
+
+.what-we-do_main-subtitle
+  text-transform: uppercase
+  display: inline-block
+  margin: $global-margin/2 auto
+  font-size: 1.2rem
+  font-weight: normal
+
 .what-we-do_main-text
   flex-grow: 1
+  font-size: 1.2rem
+  line-height: 1.2
+  max-width: 700px
+  margin: 0 auto
 
 .what-we-do_secondary
   display: flex
@@ -41,9 +56,9 @@
   margin: $global-padding 0 0
   max-height: 900px
   display: flex
-  justify-content: space-around
+  justify-content: space-between
   flex-direction: column
-  padding: 10% $global-padding*4 $global-padding
+  padding: 10% $global-padding
   opacity: 0.8
   background:
     size: cover
@@ -58,6 +73,10 @@
 
 .what-we-do_secondary-text
   flex-grow: 1
+  font-size: 1.2rem
+  line-height: 1.2
+  max-width: 450px
+  margin: auto
 
 .what-we-do_portfolio
   flex-basis: 100%
@@ -68,10 +87,20 @@
   max-height: 900px
   text-align: center
   height: calc(100vh - 40px)
-  padding: 10% $global-padding*4 $global-padding
+  padding: $global-padding*4
   background:
     size: cover
     repeat: no-repeat
     position: center
   &:nth-of-type(1)
     background-image: $gradient, url('../images/what-we-do-bg-6.jpg')
+
+.what-we-do_portfolio-text
+  font-size: 1.2rem
+  line-height: 1.2
+  display: inline-block
+  margin: $global-margin auto $global-margin*2
+
+.what-we-do_portfolio-link
+  max-width: 120px
+  margin: 0 auto

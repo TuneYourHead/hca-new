@@ -1,0 +1,29 @@
+@for $i from 1 through 23
+    .partners-list-item
+      &:nth-of-type(#{$i})
+        background-image: url("../images/partners/partners-#{$i}.gif")
+
+.partners
+  text-align: center
+  margin: $global-margin*2 auto
+  padding: $global-padding
+
+.partners-list
+  display: flex
+  flex-wrap: wrap
+  justify-content: space-around
+  align-items: center
+  margin-top: $global-margin*2
+
+.partners-list-item
+  list-style: none
+  display: inline-block
+  flex-basis: calc(8.3% - 5px)
+  height: 60px
+  margin-bottom: $global-margin
+  filter: grayscale(100%)
+  transition: all 0.3s ease-in-out
+  background:
+    repeat: no-repeat
+    size: contain
+    position: center
