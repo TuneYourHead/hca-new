@@ -1,0 +1,55 @@
+// Define vertical, horizontal, or both position
+@mixin center($position)
+  position: absolute
+
+  @if $position == 'vertical'
+    top: 50%
+    -webkit-transform: translateY(-50%)
+    -ms-transform: translateY(-50%)
+    transform: translateY(-50%)
+
+  @else if $position == 'horizontal'
+    left: 50%
+    -webkit-transform: translateX(-50%)
+    -ms-transform: translateX(-50%)
+    transform: translate(-50%)
+
+  @else if $position == 'both'
+    top: 50%
+    left: 50%
+    -webkit-transform: translate(-50%, -50%)
+    -ms-transform: translate(-50%, -50%)
+    transform: translate(-50%, -50%)
+
+//Padding mixin
+@mixin padding($top, $right, $bottom, $left)
+  padding-top: $top
+  padding-right: $right
+  padding-bottom: $bottom
+  padding-left: $left
+
+//Margin mixin
+@mixin margin($top, $right, $bottom, $left)
+  margin-top: $top
+  margin-right: $right
+  margin-bottom: $bottom
+  margin-left: $left
+
+@mixin clearfix
+  &:after
+    content: ""
+    display: table
+    clear: both
+
+@mixin color-overlay($overlay-color)
+  &:before
+    display: block
+    position: absolute
+    content: ""
+    background: $overlay-color
+    top: 0
+    left: 0
+    height: 100%
+    width: 100%
+    z-index: 1
+    transition: all 0.3s ease-in-out

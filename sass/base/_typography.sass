@@ -1,0 +1,68 @@
+
+h1, h2, h3, h4, h5, h6
+	margin: 0
+
+
+h1, h2, h3, h4, h5, h6
+	display: block
+
+// Basic Text Style
+
+p
+	font-size: 1em
+	line-height: 1.1em
+
+hr
+  border: solid $border-color
+  border-width: 1px 0 0
+  clear: both
+  margin: 0
+  height: 0
+
+a
+  font-size: 1em
+  text-decoration: none
+  color: $link-color
+  transition: color 0.2s ease-in-out
+  &:hover
+    color: $link-hover
+
+ul
+	margin: 0
+	padding: 0
+
+button, .button, .btn
+  color: white
+  box-shadow: 0 0 0 #ccc
+  border: none
+  height: 40px
+  min-width: 100px
+  padding: 0.5em 1em
+  background-color: $accent
+  font-size: 0.8em
+  letter-spacing: 1px
+  text-transform: uppercase
+  border-radius: $global-radius
+  transition: background-color 0.2s ease-in-out
+  display: block
+  &:hover
+    background-color: lighten($accent, 10%)
+
+.section-title
+	font-family: 'Black Ops One', cursive
+	text-transform: uppercase
+	font-weight: lighter
+
+.link-button
+	padding: $global-padding/2 $global-padding*2
+	border: 2px solid $white
+	box-shadow: 3px 3px 3px rgba(0,0,0,.35)
+	border-radius: 20px
+	background-color: transparent
+	color: $white
+	text-align: center
+	font-weight: bold
+	text-transform: capitalize
+	transition: all 0.3s ease-in-out
+	&:hover
+		background-color: $white
