@@ -1,17 +1,19 @@
 .header
-  display: flex
-  flex-wrap: wrap
-  justify-content: space-between
-  padding: $global-padding
-  align-items: center
-  background-color: $white
-  @media(max-width: $xl-max-width)
-    padding: $global-padding
+  background-color: #fafafa
+  .section-wrapper
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-between
+    padding: 20px 0px
+    align-items: center
+    @media(max-width: $xl-max-width)
+      padding: 20px $global-padding
 
 .header-logo
   flex-basis: 16.6%
   img
     max-width: 100%
+    width: 235px
 
 .header-nav
   list-style: none

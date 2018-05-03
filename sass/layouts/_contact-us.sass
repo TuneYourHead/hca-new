@@ -1,34 +1,43 @@
 .contact-us
-  display: flex
-  justify-content: space-between
-  background-color: $white
-  padding: $global-padding
-  padding-bottom: $global-padding*4
-  .link-button
-    border: 1px solid $accent
-    color: $accent
-    box-shadow: none
-    max-width: 140px
-    &:hover
-      color: $white
-      background-color: $accent
+  background-color: #fafafa
+  .section-wrapper
+    display: flex
+    justify-content: space-between
+    padding: 100px $global-padding
+    .link-button
+      border: 1px solid $accent
+      color: $accent
+      padding: 11px 33px
+      box-shadow: none
+      max-width: 140px
+      &:hover
+        color: $white
+        background-color: $accent
+    @media(max-width: $lg-max-width)
+      flex-wrap: wrap
 
 .contact-us-item
-  flex-basis: calc(50% - 10px)
   text-align: center
   display: flex
   justify-content: space-between
   flex-direction: column
+  @media(max-width: $lg-max-width)
+    flex-basis: 100%
+    margin-top: $global-margin
+    &:first-of-type
+      padding-bottom: $global-margin
+      border-bottom: 1px solid rgba(51,51,51,.5)
+      margin-top: 0
 
 .contact-us-item-text
-  max-width: 400px
+  width: 400px
   margin: $global-margin/2 auto
   font-size: 1.2rem
   line-height: 1.2
 
 .contact-us-input
   border: 1px solid $light-gray
-  padding: $global-padding/2 $global-padding*2
+  padding: 11px 33px
   border-radius: 20px
   max-width: 350px
   width: 100%

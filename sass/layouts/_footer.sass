@@ -1,8 +1,13 @@
 .footer
-  display: flex
-  flex-wrap: wrap
-  justify-content: space-between
-  padding: $global-padding
+  background-color: #fafafa
+  .section-wrapper
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-between
+    padding: $global-padding 0
+    @media(max-width: $xl-max-width)
+      padding: $global-padding
+
 
 .footer-topbar
   flex-basis: 100%
@@ -10,16 +15,26 @@
   justify-content: space-between
   align-items: center
   padding: $global-padding/2 0
-  border-bottom: 1px solid $black
+  border-bottom: 1px solid rgba(51,51,51,.5)
+  a
+    margin-left: 23px
+    color: $accent
+    &:hover
+      color: $accent
+      text-decoration: underline
+
 
 .footer-nav
   flex-basis: 50%
-  border-bottom: 1px solid $black
+  border-bottom: 1px solid rgba(51,51,51,.5)
   padding: $global-padding 0
+  @media(max-width: $lg-max-width)
+    flex-basis: 100%
 
 .footer-nav-logo
   display: block
   max-width: 100%
+  width: 220px
 
 .footer-nav-list
   display: inline-block
@@ -28,16 +43,35 @@
 
 .footer-nav-list-item
   list-style: none
+  margin-bottom: 15px
+  &:first-of-type
+    font-weight: bold
+
+.footer-nav-list-item_active
+  position: relative
+  display: inline-block
+  &:after
+    display: block
+    width: 100%
+    position: absolute
+    bottom: -3px
+    left: 0
+    content: ""
+    border-bottom: 1px solid rgba(51,51,51,.5)
 
 .footer-info
   flex-basis: 25%
-  border-bottom: 1px solid $black
-  border-left: 1px solid $black
+  border-bottom: 1px solid rgba(51,51,51,.5)
+  border-left: 1px solid rgba(51,51,51,.5)
   text-align: center
   padding: $global-padding
   display: flex
   flex-direction: column
   justify-content: space-between
+  @media(max-width: $lg-max-width)
+    flex-basis: 50%
+    &:first-of-type
+      border-left: 0px solid rgba(0,0,0,0)
 
 .footer-info-text
   flex-grow: 1

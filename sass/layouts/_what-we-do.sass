@@ -6,12 +6,14 @@
 .what-we-do_main
   display: flex
   justify-content: space-between
+  @media(max-width: $lg-max-width)
+    flex-wrap: wrap
 
 .what-we-do_main-item
-  flex-basis: calc(50% - 10px)
+  flex-basis: calc(50% - 6.5px)
   background-color: #ccc
   text-align: center
-  height: calc(100vh - 40px)
+  height: calc(100vh - 26px)
   max-height: 800px
   display: flex
   justify-content: space-between
@@ -26,6 +28,9 @@
     background-image: $gradient, url('../images/what-we-do-bg-1.jpg')
   &:nth-of-type(2)
     background-image: $gradient, url('../images/what-we-do-bg-2.jpg')
+  @media(max-width: $lg-max-width)
+    flex-basis: 100%
+    max-height: 400px
 
 .what-we-do_main-title
   text-transform: uppercase
@@ -39,8 +44,8 @@
 
 .what-we-do_main-text
   flex-grow: 1
-  font-size: 1.2rem
-  line-height: 1.2
+  font-size: 1.125rem
+  line-height: 1.4
   max-width: 700px
   margin: 0 auto
   font-weight: 300
@@ -48,12 +53,14 @@
 .what-we-do_secondary
   display: flex
   justify-content: space-between
+  @media(max-width: $lg-max-width)
+    flex-wrap: wrap
 
 .what-we-do_secondary-item
-  flex-basis: calc(33.333% - 13.333px)
+  flex-basis: calc(33.333% - 8.666px)
   background-color: #ccc
   text-align: center
-  height: calc(100vh - 40px)
+  height: calc(100vh - 26px)
   margin: $global-padding 0 0
   max-height: 800px
   display: flex
@@ -71,11 +78,14 @@
     background-image: $gradient, url('../images/what-we-do-bg-4.jpg')
   &:nth-of-type(3)
     background-image: $gradient, url('../images/what-we-do-bg-5.jpg')
+  @media(max-width: $lg-max-width)
+    flex-basis: 100%
+    max-height: 400px
 
 .what-we-do_secondary-text
   flex-grow: 1
-  font-size: 1.2rem
-  line-height: 1.2
+  font-size: 1.125rem
+  line-height: 1.4
   max-width: 450px
   margin: $global-margin/2 auto 0
   font-weight: 300
@@ -88,7 +98,7 @@
   background-color: #ccc
   max-height: 800px
   text-align: center
-  height: calc(100vh - 40px)
+  height: calc(100vh - 26px)
   padding: $global-padding*4
   background:
     size: cover
@@ -96,10 +106,12 @@
     position: center
   &:nth-of-type(1)
     background-image: $gradient, url('../images/what-we-do-bg-6.jpg')
+  @media(max-width: $lg-max-width)
+    max-height: 400px
 
 .what-we-do_portfolio-text
-  font-size: 1.2rem
-  line-height: 1.2
+  font-size: 1.125rem
+  line-height: 1.4
   display: inline-block
   margin: $global-margin auto $global-margin*2
   font-weight: 300

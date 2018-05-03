@@ -1,6 +1,6 @@
 .hero
   padding: 0 $global-padding
-  height: calc(70vh - 85px)
+  height: calc(75vh - 85px)
   min-height: 500px
   position: relative
   background: $gradient, url("../images/hero.jpg")
@@ -20,12 +20,15 @@
   display: flex
   flex-wrap: wrap
   justify-content: space-between
-  padding: $global-padding/2 $global-padding
-  border-bottom: 0.5px solid $white
+  padding: $global-padding/2 0
+  border-bottom: 1px solid rgba(255,255,255,.5)
   p
     display: inline-block
     a
       color: $white
+      margin-left: 23px
+  @media(max-width: $xl-max-width)
+    padding: $global-padding/2 $global-padding
 
 .hero-center
   position: absolute
@@ -41,8 +44,8 @@
   text-transform: uppercase
 
 .hero-center-subtitle
-  font-size: 1.3rem
-  line-height: 1.2
+  font-size: 1.125rem
+  line-height: 1.4
   font-weight: 300
 
 .hero-center-btn
