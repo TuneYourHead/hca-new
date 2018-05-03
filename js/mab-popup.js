@@ -1,7 +1,9 @@
 $( document ).ready(function(){
   $("body").prepend("<div class='darkOverlay' style='display: none'></div>");
-  var actionButton = $('button').filter("[data-pop]");
-  actionButton.on("click", function(){
+  var actionButton = $('a').filter("[data-pop]");
+  var actionButtonOut = $('i').filter("[data-pop-out]");
+  actionButton.on("click", function(e){
+    e.preventDefault();
     var currentActionButton = $(this);
     var targetId = '#' + ($(this).attr("data-pop"));
     var AnimationIn = ($(""+targetId+"").attr("data-pop-animation"));
@@ -39,6 +41,9 @@ $( document ).ready(function(){
         $(""+targetId+"").fadeOut();
       }
     }
+    actionButtonOut.on("click",function(){
+      targetAnimationOut();
+    });
     $(".darkOverlay").on("click", function(){
       targetAnimationOut();
     });

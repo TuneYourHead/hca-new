@@ -5,7 +5,7 @@
     flex-wrap: wrap
     justify-content: space-between
     padding: $global-padding 0
-    @media(max-width: $xl-max-width)
+    @media(max-width: 1100px)
       padding: $global-padding
 
 
@@ -28,7 +28,8 @@
   flex-basis: 50%
   border-bottom: 1px solid rgba(51,51,51,.5)
   padding: $global-padding 0
-  @media(max-width: $lg-max-width)
+  position: relative
+  @media(max-width: 1100px)
     flex-basis: 100%
 
 .footer-nav-logo
@@ -64,21 +65,67 @@
   border-bottom: 1px solid rgba(51,51,51,.5)
   border-left: 1px solid rgba(51,51,51,.5)
   text-align: center
-  padding: $global-padding
+  padding: 25px 45px
   display: flex
   flex-direction: column
   justify-content: space-between
-  @media(max-width: $lg-max-width)
+  text-align: left
+  @media(max-width: 1100px)
     flex-basis: 50%
-    &:first-of-type
-      border-left: 0px solid rgba(0,0,0,0)
+    &.footer-info_showroom
+      border-left: none
 
 .footer-info-text
   flex-grow: 1
+  max-width: 60%
+  font-size: 1.28rem
+
+.footer-info-title
+  font-size: 1.7rem
+  max-width: 60%
+  text-transform: uppercase
 
 .footer-map-link
   display: block
   color: $accent
+  max-width: 70%
+  font-size: 0.8rem
+  font-weight: 400
+  line-height: 1.4
+  margin-top: $global-padding
   &:hover
     color: $accent
     text-decoration: underline
+
+
+.footer-link-button
+  display: inline-block
+  margin-left: 0
+
+.footer-copyright
+  display: inline-block
+  font-weight: 400
+  font-size: 12px
+
+.footer-links-item
+  display: inline-block
+  color: $accent
+  margin-left: 20px
+  font-weight: 400
+  font-size: 12px
+  position: relative
+  &:before
+    position: absolute
+    top: 0
+    left: -10px
+    height: 100%
+    width: 1px
+    background-color: rgba(51,51,51,.5)
+    content: ""
+  &:hover
+    text-decoration: underline
+
+.footer-nav-map-link
+  position: absolute
+  bottom: $global-padding
+  left: 0

@@ -1,0 +1,60 @@
+.designer-modal
+  background-color: #fafafa
+  text-align: center
+  position: relative
+  &:before
+    position: absolute
+    top: 0
+    right: 0
+    width: 50%
+    height: 100%
+    content: ""
+    background:
+      image: url("../images/designer-modal-image.png")
+      size: cover
+      position: center
+      repeat: no-repeat
+    @media(max-width: $lg-max-width)
+      display: none
+
+.designer-modal-form
+  max-width: 50%
+  text-align: center
+  padding: 5%
+  @media(max-width: $lg-max-width)
+    max-width: 100%
+    width: 380px
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+
+.designer-modal-close
+  position: absolute
+  top: -15px
+  right: -15px
+  width: 30px
+  height: 30px
+  border-radius: 50%
+  background:
+    image: url("../images/modal-close.png")
+    repeat: no-repeat
+    position: center
+    size: contain
+  cursor: pointer
+
+.designer-modal-title
+  line-height: 1
+  text-transform: uppercase
+
+.designer-modal-subtitle
+  text-transform: uppercase
+  max-width: 370px
+  font-size: 1.2rem
+  line-height: 1.4
+  font-weight: 400
+  margin: $global-margin auto
+
+
+.designer-modal-input_submit
+  margin-top: $global-padding*2

@@ -7,6 +7,8 @@
   <title>Indoor & Outdoor Sports Flooring | Home Court Advantage</title>
   <link rel="stylesheet" href="./css/main.css">
   <link href="https://fonts.googleapis.com/css?family=Black+Ops+One|Lato:100,300,400,700" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+  <script src='https://www.google.com/recaptcha/api.js'></script>
 </head>
 <body>
   <header class="header">
@@ -17,11 +19,12 @@
         <li class="header-nav-item"><a href="">Residential</a></li>
         <li class="header-nav-item"><a href="">Commercial</a></li>
         <li class="header-nav-item"><a href="">Accessories</a></li>
-        <li class="header-nav-item"><a href="">Court Designer</a></li>
+        <li class="header-nav-item"><a href="" data-pop="homepage-designer-modal">Court Designer</a></li>
         <li class="header-nav-item"><a href="">Blog/News</a></li>
         <li class="header-nav-item"><a href="">Portfolio</a></li>
         <li class="header-nav-item"><a href="">Contact us</a></li>
       </ul>
+      <i class="header-nav-btn"></i>
     </div>
   </header>
   <section class="hero">
@@ -59,12 +62,12 @@
       <div class="what-we-do_secondary-item">
         <h3 class="what-we-do_secondary-title section-title">Court Designer</h3>
         <p class="what-we-do_secondary-text">Use our custom design tool to bring your idea to life.  If you can dream it, we can build it.</p>
-        <a href="" class="what-we-do_secondary-link link-button">Let’s Design</a>
+        <a class="what-we-do_secondary-link link-button" data-pop="homepage-designer-modal">Let’s Design</a>
       </div>
       <div class="what-we-do_secondary-item">
         <h3 class="what-we-do_secondary-title section-title">Blog/News</h3>
         <p class="what-we-do_secondary-text">Get tips and tricks, industry related information, the latest product news, care instructions, and more with our Home Court Advantage Blog.</p>
-        <a href="" class="what-we-do_secondary-link link-button">Read More</a>
+        <a href="" class="what-we-do_secondary-link link-button" >Read More</a>
       </div>
     </section>
     <section class="what-we-do_portfolio">
@@ -80,14 +83,17 @@
       <div class="contact-us-item">
         <h3 class="contact-us-item-title section-title">Contact Us</h3>
         <p class="contact-us-item-text">For estimates or general questions, please contact us at your convenience. It’s an honor to help you make your sport dream a reality.</p>
-        <a href="" class="contact-us-item-link link-button">Contact</a>
+        <a href="" class="contact-us-item-link link-button link-button-lightbg">Contact</a>
       </div>
       <div class="contact-us-item">
         <h3 class="contact-us-item-title section-title">Newsletter</h3>
         <p class="contact-us-item-text">Get in the Game.  Subscribe below.</p>
         <form action="" class="contact-us-form">
-          <input type="email" class="contact-us-input" required placeholder="email">
-          <input type="submit" class="contact-us-submit link-button" value="Sign Up">
+          <div>
+            <input type="email" id="contact-us-form-email" class="contact-us-input" required name="email">
+            <label for="contact-us-form-email">Email <span class="label-accent">*</span></label>
+          </div>
+          <input type="submit" class="contact-us-submit link-button link-button-lightbg" value="Sign Up">
         </form>
       </div>
     </div>
@@ -157,27 +163,50 @@
           <li class="footer-nav-list-item"><a href="">Instagram</a></li>
           <li class="footer-nav-list-item"><a href="">LinkedIn</a></li>
         </ul>
-        <a href="" class="footer-map-link">724 Anthony Trail, Northbrook, Illinois 60062, United States</a>
+        <a href="" class="footer-map-link footer-nav-map-link">724 Anthony Trail, Northbrook, Illinois 60062, United States</a>
       </section>
-      <section class="footer-info">
+      <section class="footer-info footer-info_showroom">
         <h3 class="footer-info-title section-title">Visit our showroom!</h3>
         <a href="" class="footer-map-link">724 Anthony Trail, Northbrook, Illinois 60062, United States</a>
         <p class="footer-info-text">Come try out our products in our very own test gym we created just for you!</p>
-        <a href="" class="link-button">Directions</a>
+        <a href="" class="link-button link-button-lightbg footer-link-button">Directions</a>
       </section>
       <section class="footer-info">
         <h3 class="footer-info-title section-title">Court Designer</h3>
         <p class="footer-info-text">If you can dream it, we can build it. See your vision come to life with our court designer.</p>
-        <a href="" class="link-button">Court Designer</a>
+        <a href="" class="link-button link-button-lightbg footer-link-button" data-pop="homepage-designer-modal">Court Designer</a>
       </section>
       <section class="footer-links">
-        <p class="footer-copyright footer-links-item">Copyright © 2018 Home Court Advantage. All rights reserved.</p>
+        <p class="footer-copyright">Copyright © 2018 Home Court Advantage. All rights reserved.</p>
         <a href="" class="footer-links-item">Privacy Policy</a>
         <a href="" class="footer-links-item">Terms of Use</a>
       </section>
     </div>
   </footer>
+  <section class="designer-modal darkOverlayOn" id="homepage-designer-modal" data-pop-animation="slideInDown" data-pop-animation-out="fadeOutUp">
+    <i class="designer-modal-close" data-pop-out="homepage-designer-modal"></i>
+    <form action="" class="designer-modal-form" method="POST">
+      <h3 class="designer-modal-title section-title">Court Designer</h3>
+      <p class="designer-modal-subtitle">upon submitting the form, you will be dircted to our court designer page</p>
+      <div>
+        <input type="text" id="designer-modal-name" class="designer-modal-input" name="name" required>
+        <label for="designer-modal-name">Name <span class="label-accent">*</span></label>
+      </div>
+      <div>
+        <input type="email" id="designer-modal-email" class="designer-modal-input" name="email" required>
+        <label for="designer-modal-email">Email <span class="label-accent">*</span></label>
+      </div>
+      <div>
+        <input type="text" id="designer-modal-address" class="designer-modal-input zip-code" maxlength="5" name="address" required>
+        <label for="designer-modal-address">Zipcode <span class="label-accent">*</span></label>
+      </div>
+      <div class="g-recaptcha" data-sitekey="6LemEFcUAAAAABWy45ws1TPvrW19hzJAXLtmYj13"></div>
+      <input type="submit" class="designer-modal-input_submit link-button link-button-lightbg" value="Submit">
+    </form>
+  </section>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>
+  <script src="./js/mab-popup.js"></script>
   <script src="./js/main.js"></script>
 </body>
 </html>

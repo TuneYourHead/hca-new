@@ -11,6 +11,9 @@
 
 .header-logo
   flex-basis: 16.6%
+  @media(max-width: $lg-max-width)
+    flex-basis: 66.666%
+    z-index: 110
   img
     max-width: 100%
     width: 235px
@@ -21,13 +24,50 @@
   display: flex
   justify-content: space-between
   text-transform: capitalize
-  @media(max-width: $xl-max-width)
-    flex-grow: 0.8
   @media(max-width: $lg-max-width)
     flex-basis: 100%
     flex-wrap: wrap
+    position: fixed
+    z-index: -100
+    top: 0
+    height: 0
+    left: 0
+    width: 100vw
+    background-color: #fafafa
+    padding: 100px $global-padding
+    transition: all 0.3s ease-in-out
+    opacity: 0
+
 
 .header-nav-item
   display: inline-block
   a
     font-size: 1rem
+  @media(max-width: $lg-max-width)
+    display: inline-block
+    width: 100%
+    text-align: center
+    margin: $global-margin auto 0
+
+.header-nav-btn
+  display: none
+  @media(max-width: $lg-max-width)
+    display: block
+    height: 35px
+    width: 35px
+    position: relative
+    z-index: 110
+    cursor: pointer
+    background:
+      image: url("../images/menu.png")
+      size: contain
+      repeat: no-repeat
+      position: center
+
+.header-nav_active
+  height: 101vh
+  opacity: 1
+  z-index: 100
+
+.header-nav-btn_active
+  background-image: url("../images/modal-close.png")

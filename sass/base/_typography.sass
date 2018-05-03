@@ -68,3 +68,58 @@ button, .button, .btn
 	text-shadow: none
 	&:hover
 		background-color: $white
+
+.link-button-lightbg
+	border: 1px solid $accent
+	color: $accent
+	font-weight: 300
+	padding: 11px 33px
+	box-shadow: none
+	max-width: 170px
+	&:hover
+		color: $white
+		background-color: $accent
+
+.label-accent
+	color: $accent
+
+input
+  display: block
+  border: 1px solid rgba(51,51,51,.5)
+  padding: 11px 10px
+  border-radius: 4px
+  background-color: transparent
+  transition: all 0.3s ease-in-out
+  width: 100%
+  color: #aaaaaa
+  font-size: 1rem
+  margin-bottom: $global-margin
+  &:active, &:focus
+    border: 1px solid $accent
+    outline: none
+    font-size: 1rem
+    + label
+      font-size: 10px
+      margin-top: - 30px
+
+input.active + label
+  font-size: 12px
+  margin-top: - 37px
+
+form > div
+  position: relative
+  max-width: 370px
+  margin: $global-padding auto
+
+form label
+  color: #aaaaaa
+  position: absolute
+  top: 50%
+  transform: translateY(-50%)
+  left: 10px
+  transition: all 0.3s ease-in-out
+
+.g-recaptcha
+	display: inline-block
+	max-width: 100%
+	margin: 0 auto
