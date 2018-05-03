@@ -1,0 +1,72 @@
+include layouts/head.pug
+include layouts/header.pug
+section.hero
+      .hero-topbar.section-wrapper
+        p Contact Hours: M-F 8:30AM-5PM, Sat 10:30AM-3PM, Sun Closed
+        p
+          | Show Room Hours: By Appointment Only 
+          a(href='tel:8472748998') (847) 274 - 8998
+      .hero-center
+        h1.hero-center-title.section-title Home Court Advantage
+        p.hero-center-subtitle
+          | Full service athletic flooring and basketball hoops and accessories, to synthetic turf…
+          br
+          | whatever you can dream up, we can make it happen.
+        a.hero-center-btn.link-button(href='') About
+section.what-we-do
+      section.what-we-do_main
+        .what-we-do_main-item
+          h3.what-we-do_main-title.section-title RESIDENTIAL
+          h4.what-we-do_main-subtitle INDOOR/OUTDOOR COURTS FOR YEAR-ROUND FAMILY FUN
+          p.what-we-do_main-text
+            | Cost effective modular floors, wood floors, vinyl floors, hoops, wall padding, custom logos, nets, lockers, and anything else to make your indoor court the envy of the neighborhood.
+          a.what-we-do_main-link.link-button(href='') Let’s Play
+        .what-we-do_main-item
+          h3.what-we-do_main-title.section-title COMMERCIAL
+          h4.what-we-do_main-subtitle For your high performance needs
+          p.what-we-do_main-text
+            | We specialize in high performance flooring and accessories to handle all levels of competition.  No project is too large.
+          a.what-we-do_main-link.link-button(href='') Let’s Build
+      section.what-we-do_secondary
+        .what-we-do_secondary-item
+          h3.what-we-do_secondary-title.section-title Accessories
+          p.what-we-do_secondary-text
+            | From hoops and volleyball nets to scoreboards and hockey goals, we provide a full service turn key solution for your athletic court.
+          a.what-we-do_secondary-link.link-button(href='') Let’s Play
+        .what-we-do_secondary-item
+          h3.what-we-do_secondary-title.section-title Court Designer
+          p.what-we-do_secondary-text
+            | Use our custom design tool to bring your idea to life.  If you can dream it, we can build it.
+          a.what-we-do_secondary-link.link-button(data-pop='homepage-designer-modal') Let’s Design
+        .what-we-do_secondary-item
+          h3.what-we-do_secondary-title.section-title Blog/News
+          p.what-we-do_secondary-text
+            | Get tips and tricks, industry related information, the latest product news, care instructions, and more with our Home Court Advantage Blog.
+          a.what-we-do_secondary-link.link-button(href='') Read More
+      section.what-we-do_portfolio
+        .what-we-do_portfolio-item
+          h3.what-we-do_portfolio-title.section-title Portfolio
+          p.what-we-do_portfolio-text
+            | See the Home Court Advantage by viewing some of our latest projects to help inspire your athletic court vision.
+          a.what-we-do_portfolio-link.link-button(href='') About
+section.contact-us
+      .section-wrapper
+        .contact-us-item
+          h3.contact-us-item-title.section-title Contact Us
+          p.contact-us-item-text
+            | For estimates or general questions, please contact us at your convenience. It’s an honor to help you make your sport dream a reality.
+          a.contact-us-item-link.link-button.link-button-lightbg(href='') Contact
+        .contact-us-item
+          h3.contact-us-item-title.section-title Newsletter
+          p.contact-us-item-text Get in the Game.  Subscribe below.
+          form.contact-us-form(action='')
+            div
+              input#contact-us-form-email.contact-us-input(type='email', required='', name='email')
+              label(for='contact-us-form-email')
+                | Email 
+                span.label-accent *
+            input.contact-us-submit.link-button.link-button-lightbg(type='submit', value='Sign Up')
+include layouts/partners.pug
+include layouts/footer.pug
+include layouts/designer-modal.pug
+include layouts/scripts.pug
