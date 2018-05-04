@@ -2,13 +2,12 @@ $( document ).ready(function(){
 
   $("form").submit(function(e) {
     $(this).find("input[type='submit']").val('submiting');
-    if (e.preventDefault(), "" == grecaptcha.getResponse()) alert("Recaptcha is wrong!");
-    else {
+    e.preventDefault();
         var dataform = $(this).serializeArray();
         console.log(dataform);
         $.ajax({
             type: "POST",
-            url: "https://homecourtadvantage.net/devsite/leadform.php",
+            url: "/leadform.php",
             data: dataform,
             success: function(e) {
                 $("form").find("input[type='submit']").val('submit');
@@ -16,7 +15,6 @@ $( document ).ready(function(){
                 $('form')[0].reset();
             }
         })
-    }
   });
 
   var labelAnimation = function() {

@@ -1,4 +1,15 @@
-include ../layouts/head.pug
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    meta(http-equiv='X-UA-Compatible', content='ie=edge')
+    title Indoor & Outdoor Sports Flooring | Home Court Advantage
+    link(rel='stylesheet', href='https://tuneyourhead.github.io/hca-new/css/main.css')
+    link(rel='stylesheet', href='../css/main.css')
+    link(href='https://fonts.googleapis.com/css?family=Black+Ops+One|Lato:100,300,400,700', rel='stylesheet')
+    link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css')
+  body
 include ../layouts/header.pug
 section.hero
       .hero-topbar.section-wrapper
@@ -85,4 +96,9 @@ section.contact-page
 include ../layouts/partners.pug
 include ../layouts/footer.pug
 include ../layouts/designer-modal.pug
-include ../layouts/scripts.pug
+script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js')
+script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js')
+script(src='https://tuneyourhead.github.io/hca-new/js/mab-popup.js')
+script(src='https://tuneyourhead.github.io/hca-new/js/main.js')
+script(src='../js/main.js')
+script(src='https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit')
