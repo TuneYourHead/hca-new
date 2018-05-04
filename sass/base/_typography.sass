@@ -83,7 +83,7 @@ button, .button, .btn
 .label-accent
 	color: $accent
 
-input
+input, textarea
   display: block
   border: 1px solid rgba(51,51,51,.5)
   padding: 11px 10px
@@ -102,7 +102,15 @@ input
       font-size: 10px
       margin-top: - 30px
 
-input.active + label
+textarea
+	padding-top: 11px
+	text-indent: 0
+	min-height: 145px
+
+form textarea + label
+	top: 20px
+
+input.active + label, textarea.active + label
   font-size: 12px
   margin-top: - 37px
 

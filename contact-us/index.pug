@@ -12,37 +12,76 @@ section.hero
           | Full service athletic flooring and basketball hoops and accessories, to synthetic turf…
           br
           | whatever you can dream up, we can make it happen.
-section.contact-section
-    form.contact-section-form.contact-section_quote
-      h3.contact-section-form-title.section-title request a quote
-      p.contact-section-form-subtitle For estimates, please contact us at your convenience. It's an honor to help you make your sports dream a reality. 
+section.contact-page
+  .section-wrapper
+    form.contact-page-form.contact-page_quote
+      h3.contact-page-form-title.section-title request a quote
+      p.contact-page-form-subtitle For estimates, please contact us at your convenience. It's an honor to help you make your sports dream a reality. 
+      input(type='hidden', name='formsubject' value='Request a Quote')
       div
-        input#contact-section-form-name.contact-us-input(type='name', required='', name='name')
-        label(for='contact-section-form-name')
+        input#contact-page-form-name.contact-us-input(type='name', required='', name='name')
+        label(for='contact-page-form-name')
           | Name 
           span.label-accent *
       div
-        input#contact-section-form-email.contact-us-input(type='email', required='', name='email')
-        label(for='contact-section-form-email')
+        input#contact-page-form-email.contact-us-input(type='email', required='', name='email')
+        label(for='contact-page-form-email')
           | Email
           span.label-accent *
       div
-        input#contact-section-form-zipcode.contact-us-input.zip-code(type='text', required='', name="address", maxlength='5')
-        label(for='contact-section-form-zipcode')
+        input#contact-page-form-zipcode.contact-us-input.zip-code(type='text', required='', name="address", maxlength='5')
+        label(for='contact-page-form-zipcode')
           | Zipcode
           span.label-accent *
       div
-        input#contact-section-form-phone.contact-us-input.phone(type="text", name="phone", maxlength='10')
-        label(for='contact-section-form-phone')
+        input#contact-page-form-phone.contact-us-input.phone(type="text", name="phone", maxlength='10')
+        label(for='contact-page-form-phone')
           | Phone
       div
-        input#contact-section-form-client_residential(type='radio', name='client')
-        label(for='contact-section-form-client_residential')
+        input#contact-page-form-client_residential(type='radio', name='client')
+        label(for='contact-page-form-client_residential')
           | Residential
-        input#contact-section-form-client_commercial(type='radio', name='client')
-        label(for='contact-section-form-client_commercial')
+        input#contact-page-form-client_commercial(type='radio', name='client')
+        label(for='contact-page-form-client_commercial')
           | Commersial
-    form.contact-section-form.contact-section_inquiry  
+      div
+        input#contact-page-form-court-type_indoor(type='radio' name='court-type')
+        label(for='contact-page-form-court-type_indoor')
+          | Indoor
+        input#contact-page-form-court-type_outdoor(type='radio' name='court-type')
+        label(for='contact-page-form-court-type_outdoor')
+          | Outdoor
+      div
+        textarea#contact-page-form-textarea(name='message')
+        label(for='contact-page-form-textarea')
+          | Message
+      .g-recaptcha
+      input.link-button.link-button-lightbg(type='submit' value='submit')
+    form.contact-page-form.contact-page_inquiry  
+      h3.contact-page-form-title.section-title general inquiry
+      p.contact-page-form-subtitle Please use the form below for general questions, comments, and feedback. 
+      input(type='hidden', name='formsubject' value='General Inquiry')
+      div
+        input#contact-page-form-name_inquiry.contact-us-input(type='name', required='', name='name')
+        label(for='contact-page-form-name_inquiry')
+          | Name 
+          span.label-accent *
+      div
+        input#contact-page-form-email_inquiry.contact-us-input(type='email', required='', name='email')
+        label(for='contact-page-form-email_inquiry')
+          | Email
+          span.label-accent *
+      div
+        input#contact-page-form-zipcode_inquiry.contact-us-input.zip-code(type='text', required='', name="address", maxlength='5')
+        label(for='contact-page-form-zipcode_inquiry')
+          | Zipcode
+          span.label-accent *
+      div
+        textarea#contact-page-form-textarea_inquiry(name='message')
+        label(for='contact-page-form-textarea_inquiry')
+          | Message
+      .g-recaptcha
+      input.link-button.link-button-lightbg(type='submit' value='submit')
 include ../layouts/partners.pug
 include ../layouts/footer.pug
 include ../layouts/designer-modal.pug

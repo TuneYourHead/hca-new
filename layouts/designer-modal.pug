@@ -3,6 +3,7 @@ section#homepage-designer-modal.designer-modal.darkOverlayOn(data-pop-animation=
   form.designer-modal-form(action='', method='POST')
     h3.designer-modal-title.section-title Court Designer
     p.designer-modal-subtitle upon submitting the form, you will be dircted to our court designer page
+    input(type='hidden', name='formsubject' value='Court Designer')
     div
       input#designer-modal-name.designer-modal-input(type='text', name='name', required='')
       label(for='designer-modal-name')
@@ -18,5 +19,5 @@ section#homepage-designer-modal.designer-modal.darkOverlayOn(data-pop-animation=
       label(for='designer-modal-address')
         | Zipcode 
         span.label-accent *
-    .g-recaptcha(data-sitekey='6LemEFcUAAAAABWy45ws1TPvrW19hzJAXLtmYj13')
+    .g-recaptcha
     input.designer-modal-input_submit.link-button.link-button-lightbg(type='submit', value='Submit')

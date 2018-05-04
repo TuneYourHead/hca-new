@@ -9,7 +9,6 @@
 <link rel="stylesheet" href="/css/main.css">
 <link href="https://fonts.googleapis.com/css?family=Black+Ops+One|Lato:100,300,400,700" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
-<script src="https://www.google.com/recaptcha/api.js"></script>
 </head>
 <body></body>
 </html>
@@ -37,34 +36,71 @@
 <p class="hero-center-subtitle">Full service athletic flooring and basketball hoops and accessories, to synthetic turf…<br>whatever you can dream up, we can make it happen.</p>
 </div>
 </section>
-<section class="contact-section">
-<form class="contact-section-form contact-section_quote">
-<h3 class="contact-section-form-title section-title">request a quote</h3>
-<p class="contact-section-form-subtitle">For estimates, please contact us at your convenience. It's an honor to help you make your sports dream a reality. </p>
+<section class="contact-page">
+<div class="section-wrapper">
+<form class="contact-page-form contact-page_quote">
+<h3 class="contact-page-form-title section-title">request a quote</h3>
+<p class="contact-page-form-subtitle">For estimates, please contact us at your convenience. It's an honor to help you make your sports dream a reality. </p>
+<input type="hidden" name="formsubject" value="Request a Quote">
 <div>
-<input class="contact-us-input" id="contact-section-form-name" type="name" required="" name="name">
-<label for="contact-section-form-name">Name <span class="label-accent">*</span></label>
+<input class="contact-us-input" id="contact-page-form-name" type="name" required="" name="name">
+<label for="contact-page-form-name">Name <span class="label-accent">*</span></label>
 </div>
 <div>
-<input class="contact-us-input" id="contact-section-form-email" type="email" required="" name="email">
-<label for="contact-section-form-email">Email<span class="label-accent">*</span></label>
+<input class="contact-us-input" id="contact-page-form-email" type="email" required="" name="email">
+<label for="contact-page-form-email">Email<span class="label-accent">*</span></label>
 </div>
 <div>
-<input class="contact-us-input zip-code" id="contact-section-form-zipcode" type="text" required="" name="address" maxlength="5">
-<label for="contact-section-form-zipcode">Zipcode<span class="label-accent">*</span></label>
+<input class="contact-us-input zip-code" id="contact-page-form-zipcode" type="text" required="" name="address" maxlength="5">
+<label for="contact-page-form-zipcode">Zipcode<span class="label-accent">*</span></label>
 </div>
 <div>
-<input class="contact-us-input phone" id="contact-section-form-phone" type="text" name="phone" maxlength="10">
-<label for="contact-section-form-phone">Phone</label>
+<input class="contact-us-input phone" id="contact-page-form-phone" type="text" name="phone" maxlength="10">
+<label for="contact-page-form-phone">Phone</label>
 </div>
 <div>
-<input id="contact-section-form-client_residential" type="radio" name="client">
-<label for="contact-section-form-client_residential">Residential</label>
-<input id="contact-section-form-client_commercial" type="radio" name="client">
-<label for="contact-section-form-client_commercial">Commersial</label>
+<input id="contact-page-form-client_residential" type="radio" name="client">
+<label for="contact-page-form-client_residential">Residential</label>
+<input id="contact-page-form-client_commercial" type="radio" name="client">
+<label for="contact-page-form-client_commercial">Commersial</label>
 </div>
+<div>
+<input id="contact-page-form-court-type_indoor" type="radio" name="court-type">
+<label for="contact-page-form-court-type_indoor">Indoor</label>
+<input id="contact-page-form-court-type_outdoor" type="radio" name="court-type">
+<label for="contact-page-form-court-type_outdoor">Outdoor</label>
+</div>
+<div>
+<textarea id="contact-page-form-textarea" name="message"></textarea>
+<label for="contact-page-form-textarea">Message</label>
+</div>
+<div class="g-recaptcha"></div>
+<input class="link-button link-button-lightbg" type="submit" value="submit">
 </form>
-<form class="contact-section-form contact-section_inquiry"> </form>
+<form class="contact-page-form contact-page_inquiry"> 
+<h3 class="contact-page-form-title section-title">general inquiry</h3>
+<p class="contact-page-form-subtitle">Please use the form below for general questions, comments, and feedback. </p>
+<input type="hidden" name="formsubject" value="General Inquiry">
+<div>
+<input class="contact-us-input" id="contact-page-form-name_inquiry" type="name" required="" name="name">
+<label for="contact-page-form-name_inquiry">Name <span class="label-accent">*</span></label>
+</div>
+<div>
+<input class="contact-us-input" id="contact-page-form-email_inquiry" type="email" required="" name="email">
+<label for="contact-page-form-email_inquiry">Email<span class="label-accent">*</span></label>
+</div>
+<div>
+<input class="contact-us-input zip-code" id="contact-page-form-zipcode_inquiry" type="text" required="" name="address" maxlength="5">
+<label for="contact-page-form-zipcode_inquiry">Zipcode<span class="label-accent">*</span></label>
+</div>
+<div>
+<textarea id="contact-page-form-textarea_inquiry" name="message"></textarea>
+<label for="contact-page-form-textarea_inquiry">Message</label>
+</div>
+<div class="g-recaptcha"></div>
+<input class="link-button link-button-lightbg" type="submit" value="submit">
+</form>
+</div>
 </section>
 <section class="partners">
 <div class="section-wrapper">
@@ -160,7 +196,7 @@
 <input class="designer-modal-input zip-code" id="designer-modal-address" type="text" maxlength="5" name="address" required="">
 <label for="designer-modal-address">Zipcode <span class="label-accent">*</span></label>
 </div>
-<div class="g-recaptcha" data-sitekey="6LemEFcUAAAAABWy45ws1TPvrW19hzJAXLtmYj13"></div>
+<div class="g-recaptcha"></div>
 <input class="designer-modal-input_submit link-button link-button-lightbg" type="submit" value="Submit">
 </form>
 </section>
@@ -169,3 +205,4 @@
 <script src="https://tuneyourhead.github.io/hca-new/js/mab-popup.js"></script>
 <script src="https://tuneyourhead.github.io/hca-new/js/main.js"></script>
 <script src="/js/main.js"></script>
+<script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&amp;render=explicit"></script>

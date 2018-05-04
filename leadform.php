@@ -3,6 +3,7 @@ ini_set('display_errors', 1);
 header("Access-Control-Allow-Origin: *");
 $obj = $_POST;
 $name = $_POST['name'];
+$formsubject = $_POST['formsubject'];
 $phone = $_POST['phone'];
 $email = $_POST['email'];
 $address = $_POST['address'];
@@ -37,7 +38,7 @@ $mail->addReplyTo('sergey@elevatecg.com', 'Information');
 
 $mail->isHTML(true);                                  // Set email format to HTML
 
-$mail->Subject = 'Email from Home Court Advantage site';
+$mail->Subject = 'Email from Home Court Advantage site'.$formsubject'';
 $mail->Body    = $body;
 
 if(!$mail->send()) {
