@@ -7,7 +7,7 @@ $( document ).ready(function(){
         console.log(dataform);
         $.ajax({
             type: "POST",
-            url: "https://tuneyourhead.github.io/hca-new/leadform.php",
+            url: "./hca-new/leadform.php",
             data: dataform,
             success: function(e) {
                 $("form").find("input[type='submit']").val('submit');
