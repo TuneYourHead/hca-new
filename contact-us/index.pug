@@ -1,5 +1,5 @@
-include /layouts/head.pug
-include /layouts/header.pug
+include ../layouts/head.pug
+include ../layouts/header.pug
 section.hero
       .hero-topbar.section-wrapper
         p Contact Hours: M-F 8:30AM-5PM, Sat 10:30AM-3PM, Sun Closed
@@ -12,8 +12,38 @@ section.hero
           | Full service athletic flooring and basketball hoops and accessories, to synthetic turf…
           br
           | whatever you can dream up, we can make it happen.
-        a.hero-center-btn.link-button(href='') About
-include /layouts/partners.pug
-include /layouts/footer.pug
-include /layouts/designer-modal.pug
-include /layouts/scripts.pug
+section.contact-section
+    form.contact-section-form.contact-section_quote
+      h3.contact-section-form-title.section-title request a quote
+      p.contact-section-form-subtitle For estimates, please contact us at your convenience. It's an honor to help you make your sports dream a reality. 
+      div
+        input#contact-section-form-name.contact-us-input(type='name', required='', name='name')
+        label(for='contact-section-form-name')
+          | Name 
+          span.label-accent *
+      div
+        input#contact-section-form-email.contact-us-input(type='email', required='', name='email')
+        label(for='contact-section-form-email')
+          | Email
+          span.label-accent *
+      div
+        input#contact-section-form-zipcode.contact-us-input.zip-code(type='text', required='', name="address", maxlength='5')
+        label(for='contact-section-form-zipcode')
+          | Zipcode
+          span.label-accent *
+      div
+        input#contact-section-form-phone.contact-us-input.phone(type="text", name="phone", maxlength='10')
+        label(for='contact-section-form-phone')
+          | Phone
+      div
+        input#contact-section-form-client_residential(type='radio', name='client')
+        label(for='contact-section-form-client_residential')
+          | Residential
+        input#contact-section-form-client_commercial(type='radio', name='client')
+        label(for='contact-section-form-client_commercial')
+          | Commersial
+    form.contact-section-form.contact-section_inquiry  
+include ../layouts/partners.pug
+include ../layouts/footer.pug
+include ../layouts/designer-modal.pug
+include ../layouts/scripts.pug
