@@ -7,7 +7,7 @@ $( document ).ready(function(){
         console.log(dataform);
         $.ajax({
             type: "POST",
-            url: "./hca-new/leadform.php",
+            url: "https://homecourtadvantage.net/devsite/leadform.php",
             data: dataform,
             success: function(e) {
                 $("form").find("input[type='submit']").val('submit');

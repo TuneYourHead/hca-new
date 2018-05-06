@@ -67,8 +67,26 @@ button, .button, .btn
 	margin: 0 auto
 	text-shadow: none
 	padding: 11px 33px
-	&:hover
+	overflow: hidden
+	position: relative
+	z-index: 2
+	&:after
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+		height: 0
+		content: ""
 		background-color: $white
+		color: $white
+		transition: all 0.3s ease-out
+		z-index: -1
+	&:hover
+		background-color: transparent
+		color: $accent
+		box-shadow: inset 4px 4px 10px $white
+		&:after
+			height: 100%
 
 .link-button-lightbg
 	border: 1px solid $accent
@@ -77,9 +95,26 @@ button, .button, .btn
 	padding: 11px 33px
 	box-shadow: none
 	max-width: 170px
-	&:hover
-		color: $white
+	overflow: hidden
+	position: relative
+	z-index: 2
+	&:after
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+		height: 0
+		content: ""
 		background-color: $accent
+		color: $white
+		transition: all 0.3s ease-out
+		z-index: -1
+	&:hover
+		background-color: transparent
+		color: $white
+		&:after
+			height: 100%
+
 
 .label-accent
 	color: $accent
@@ -100,8 +135,8 @@ input, textarea
     outline: none
     font-size: 1rem
     + label
-      font-size: 10px
-      margin-top: - 30px
+      font-size: 12px
+      margin-top: - 37px
 
 textarea
 	padding-top: 11px
@@ -133,4 +168,47 @@ form label
 	max-width: 100%
 	margin: 0 auto
 
-	
+
+.radio-input + label
+	position: relative
+	cursor: pointer
+	display: inline-block
+	text-align: left
+	width: 49%
+	padding-left: 22.5px
+	margin-top: 17.5px
+	height: 100%
+	transform: 0
+	&:active, &:focus
+		font-size: 14px
+		margin-top: 17.5px
+
+.radio-input.active + label
+	font-size: 14px
+	margin-top: 17.5px
+
+
+.radio-input-wrapper
+	background-color: #ebebeb
+	min-height: 35px
+
+.radio-input
+	position: absolute
+	opacity: 0
+
+.radio-input-check
+	position: absolute
+	top: calc(50% - 7.5px)
+	height: 15px
+	width: 15px
+	left: -5px
+	background-color: $white
+	border-radius: 50%
+	border: 1px solid rgba(51,51,51,.5)
+	transition: all 0.2s ease-in-out
+
+
+.radio-input:checked + label .radio-input-check
+	box-shadow: 0 0 2px $accent
+	border: 3px solid #ebebeb
+	background-color: $accent

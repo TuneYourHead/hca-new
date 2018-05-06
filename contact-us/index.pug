@@ -48,20 +48,24 @@ section.contact-page
         input#contact-page-form-phone.contact-us-input.phone(type="text", name="phone", maxlength='10')
         label(for='contact-page-form-phone')
           | Phone
-      div
-        input#contact-page-form-client_residential(type='radio', name='client')
+      div.radio-input-wrapper
+        input#contact-page-form-client_residential.radio-input(type='radio', name='client')
         label(for='contact-page-form-client_residential')
           | Residential
-        input#contact-page-form-client_commercial(type='radio', name='client')
+          span.radio-input-check
+        input#contact-page-form-client_commercial.radio-input(type='radio', name='client')
         label(for='contact-page-form-client_commercial')
           | Commersial
-      div
-        input#contact-page-form-court-type_indoor(type='radio' name='court-type')
+          span.radio-input-check
+      div.radio-input-wrapper
+        input#contact-page-form-court-type_indoor.radio-input(type='radio' name='court-type')
         label(for='contact-page-form-court-type_indoor')
           | Indoor
-        input#contact-page-form-court-type_outdoor(type='radio' name='court-type')
+          span.radio-input-check
+        input#contact-page-form-court-type_outdoor.radio-input(type='radio' name='court-type')
         label(for='contact-page-form-court-type_outdoor')
           | Outdoor
+          span.radio-input-check
       div
         textarea#contact-page-form-textarea(name='message')
         label(for='contact-page-form-textarea')
