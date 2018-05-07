@@ -60,6 +60,7 @@ section.contact-us
           h3.contact-us-item-title.section-title Newsletter
           p.contact-us-item-text Get in the Game.  Subscribe below.
           form.contact-us-form(action='')
+            input(type='hidden', name='formsubject' value='Newsletter')
             div
               input#contact-us-form-email.contact-us-input(type='email', required='', name='email')
               label(for='contact-us-form-email')

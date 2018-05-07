@@ -8,15 +8,17 @@ $phone = $_POST['phone'];
 $email = $_POST['email'];
 $address = $_POST['address'];
 $message = $_POST['message'];
-
+$client = $_POST['client'];
+$court = $_POST['court-type'];
 $body = '';
 if($phone == '' && $message == '') {
-$body .= "Name: ".$name."<br/>Email: ".$email."<br/>Address: ".$address;
-
-} elseif($address !='') {
-	$body .= "Name: ".$name."<br/>Email: ".$email."<br/>Address: ".$address."<br/>Message: ".$message;
+	$body .= "Name: ".$name."<br/>Email: ".$email."<br/>Address: ".$address;
+}elseif($phone == '' && $message == '' && $name == '' && $address == '') {
+	$body .= "Email: ".$email;
+}elseif($phone == '') {
+	$body .= "Name: ".$name."<br/>Email: ".$email."<br/>Address: ".$address."<br/>Message: ".$message."<br/>Client Type: ".$client."<br/>Court Type: ".$court;
 } else {
-	$body .= "Name: ".$name."<br/>Phone: ".$phone."<br/>Email: ".$email."<br/>Address: ".$address."<br/>Message: ".$message;
+	$body .= "Name: ".$name."<br/>Phone: ".$phone."<br/>Email: ".$email."<br/>Message: ".$message."<br/>Client Type: ".$client."<br/>Court Type: ".$court;
 }
 
 require "lib/mail/PHPMailerAutoload.php";
@@ -38,7 +40,7 @@ $mail->addReplyTo('sergey@elevatecg.com', 'Information');
 
 $mail->isHTML(true);                                  // Set email format to HTML
 
-$mail->Subject = 'Email from Home Court Advantage site'.$formsubject'';
+$mail->Subject = 'Court Advantage site | '.$formsubject;
 $mail->Body    = $body;
 
 if(!$mail->send()) {

@@ -1,22 +1,5 @@
 $( document ).ready(function(){
 
-  $("form").submit(function(e) {
-    $(this).find("input[type='submit']").val('submiting');
-    e.preventDefault();
-        var dataform = $(this).serializeArray();
-        console.log(dataform);
-        $.ajax({
-            type: "POST",
-            url: "https://homecourtadvantage.net/devsite/leadform.php",
-            data: dataform,
-            success: function(e) {
-                $("form").find("input[type='submit']").val('submit');
-                grecaptcha.reset();
-                $('form')[0].reset();
-            }
-        })
-  });
-
   var labelAnimation = function() {
       $("input, textarea").on("focusin", function() {}, function() {
           $(this).addClass("active");
@@ -55,3 +38,28 @@ var onloadCallback = function() {
     });
   }
 }
+
+$("form").submit(function(e) {
+  var thisForm = $(this);
+  thisForm.find("button[type='submit']").html('submiting');
+  e.preventDefault();
+  var dataform = thisForm.serializeArray();
+  if ("" == grecaptcha.getResponse()){
+    alert("Recaptcha is wrong!");
+  }else {
+    $.ajax({
+        type: "POST",
+        url: "https://homecourtadvantage.net/devsite/leadform.php",
+        data: dataform,
+        success: function(e) {
+            thisForm.find("button[type='submit']").html('submit');
+            grecaptcha.reset();
+            $.notify("Thank you for submission!", "success");
+            thisForm.trigger("reset");
+            if(thisForm.hasClass('designer-modal-form')){
+              window.open('http://www.snapsports.com/designer/', '_blank');
+            }
+            }
+        })
+    }
+});
