@@ -30,22 +30,39 @@ $( document ).ready(function(){
 
 })
 
+
 var onloadCallback = function() {
-  var recaptchas = document.querySelectorAll('div[class=g-recaptcha]');
-  for( i = 0; i < recaptchas.length; i++) {
-    grecaptcha.render( recaptchas[i], {
-      'sitekey' : '6LemEFcUAAAAABWy45ws1TPvrW19hzJAXLtmYj13',
-    });
-  }
+    if ($("#designerCaptcha").length > 0){
+      designerCaptcha = grecaptcha.render( 'designerCaptcha', {
+        'sitekey' : '6LemEFcUAAAAABWy45ws1TPvrW19hzJAXLtmYj13',
+      });
+    };
+    if ($("#quoteCaptcha").length > 0){
+      quoteCaptcha = grecaptcha.render( 'quoteCaptcha', {
+        'sitekey' : '6LemEFcUAAAAABWy45ws1TPvrW19hzJAXLtmYj13',
+      });
+    };
+    if ($("#inquiryCaptcha").length > 0){
+      inquiryCaptcha = grecaptcha.render( 'inquiryCaptcha', {
+        'sitekey' : '6LemEFcUAAAAABWy45ws1TPvrW19hzJAXLtmYj13',
+      });
+    };
+    if ($("#contactUsFormCaptcha").length > 0){
+      contactUsFormCaptcha = grecaptcha.render( 'contactUsFormCaptcha', {
+        'sitekey' : '6LemEFcUAAAAABWy45ws1TPvrW19hzJAXLtmYj13',
+      });
+    };
 }
 
-$("form").submit(function(e) {
-  var thisForm = $(this);
+var submitForm = function(thisForm, captchaID){
   thisForm.find("button[type='submit']").html('submiting');
-  e.preventDefault();
   var dataform = thisForm.serializeArray();
-  if ("" == grecaptcha.getResponse()){
+  var response = grecaptcha.getResponse(captchaID);
+  console.log(""+response+"");
+  if (response == ''){
     alert("Recaptcha is wrong!");
+    grecaptcha.reset();
+    thisForm.find("button[type='submit']").html('submit');
   }else {
     $.ajax({
         type: "POST",
@@ -62,4 +79,34 @@ $("form").submit(function(e) {
             }
         })
     }
+};
+
+
+$("#homepage-designer-modal button").click(function(e) {
+  e.preventDefault();
+  e.stopImmediatePropagation();
+  var thisForm = $(this).parent('form');
+  submitForm(thisForm, designerCaptcha);
+});
+
+
+$(".contact-us-form button").click(function(e) {
+  e.preventDefault();
+  e.stopImmediatePropagation();
+  var thisForm = $(this).parent('form');
+  submitForm(thisForm, contactUsFormCaptcha);
+});
+
+$(".contact-page-form.contact-page_quote button").click(function(e) {
+  e.preventDefault();
+  e.stopImmediatePropagation();
+  var thisForm = $(this).parent('form');
+  submitForm(thisForm, quoteCaptcha);
+});
+
+$(".contact-page-form.contact-page_inquiry button").click(function(e) {
+  e.preventDefault();
+  e.stopImmediatePropagation();
+  var thisForm = $(this).parent('form');
+  submitForm(thisForm, inquiryCaptcha);
 });

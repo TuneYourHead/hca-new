@@ -11,14 +11,16 @@ $message = $_POST['message'];
 $client = $_POST['client'];
 $court = $_POST['court-type'];
 $body = '';
-if($phone == '' && $message == '') {
-	$body .= "Name: ".$name."<br/>Email: ".$email."<br/>Address: ".$address;
-}elseif($phone == '' && $message == '' && $name == '' && $address == '') {
+if ($phone == '' && $message == '' && $name == '' && $address == '' && $client == '' && $court == ''){
 	$body .= "Email: ".$email;
+}elseif($phone == '' && $message == '' && $client == '' && $court == '') {
+	$body .= "Name: ".$name."<br/>Email: ".$email."<br/>Address: ".$address;
+}elseif($phone == '' && $client == '' && $court == '') {
+	$body .= "Name: ".$name."<br/>Email: ".$email."<br/>Address: ".$address."<br/>Message: ".$message;
 }elseif($phone == '') {
 	$body .= "Name: ".$name."<br/>Email: ".$email."<br/>Address: ".$address."<br/>Message: ".$message."<br/>Client Type: ".$client."<br/>Court Type: ".$court;
 } else {
-	$body .= "Name: ".$name."<br/>Phone: ".$phone."<br/>Email: ".$email."<br/>Message: ".$message."<br/>Client Type: ".$client."<br/>Court Type: ".$court;
+	$body .= "Name: ".$name."<br/>Phone: ".$phone."<br/>Address: ".$address."<br/>Email: ".$email."<br/>Message: ".$message."<br/>Client Type: ".$client."<br/>Court Type: ".$court;
 }
 
 require "lib/mail/PHPMailerAutoload.php";
