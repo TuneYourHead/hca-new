@@ -1,17 +1,18 @@
 .contact-page
-  background-color: #fafafa
+  background-color: $white
+  padding: $global-padding
   .section-wrapper
     display: flex
     flex-wrap: wrap
     justify-content: space-between
-    align-items: flex-start
   .g-recaptcha
     margin-bottom: $global-margin
 
 .contact-page-form
-  flex-basis: 50%
+  flex-basis: calc(50% - 6.5px)
   text-align: center
   padding: 70px 10%
+  background-color: #fafafa
   textarea
     margin-top: $global-margin
   @media(max-width: 1024px)

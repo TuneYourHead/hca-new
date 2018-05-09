@@ -11,25 +11,21 @@ $( document ).ready(function(){
       });
   };
 
-  var toggleMenu = function(){
-    $('.header-nav-btn').on('click', function(){
-      $(this).toggleClass('header-nav-btn_active');
-      $(this).parent().find('.header-nav').toggleClass('header-nav_active');
-      $('body').toggleClass('stop-scrolling');
-    })
-  };
+  $('.header-nav-btn').click(function(){
+    $(this).toggleClass('header-nav-btn_active');
+    $(this).parent().find('.header-nav').toggleClass('header-nav_active');
+    $('body').toggleClass('stop-scrolling');
+  })
 
   var maskInputs = function(){
     $('.zip-code').mask('00000');
     $('.phone').mask('(000) 000-0000');
   };
 
-  toggleMenu();
   labelAnimation();
   maskInputs();
 
 })
-
 
 var onloadCallback = function() {
     if ($("#designerCaptcha").length > 0){
@@ -71,12 +67,13 @@ var submitForm = function(thisForm, captchaID){
         success: function(e) {
             thisForm.find("button[type='submit']").html('submit');
             grecaptcha.reset();
-            $.notify("Thank you for submission!", "success");
+            thisForm.find('input').last().notify("Thank you for submission!", "success", { position:"center" });
             thisForm.trigger("reset");
             if(thisForm.hasClass('designer-modal-form')){
               window.open('http://www.snapsports.com/designer/', '_blank');
-            }
-            }
+              }
+            },
+        async: false
         })
     }
 };

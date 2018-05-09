@@ -22,7 +22,7 @@
   list-style: none
   flex-basis: 70%
   display: flex
-  justify-content: space-between
+  justify-content: flex-end
   text-transform: capitalize
   @media(max-width: $lg-max-width)
     flex-basis: 100%
@@ -41,6 +41,9 @@
 
 .header-nav-item
   display: inline-block
+  padding-right: 20px
+  &:last-of-type
+    padding-right: 0px
   a
     font-size: 1rem
   @media(max-width: $lg-max-width)
