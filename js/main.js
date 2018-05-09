@@ -27,6 +27,8 @@ $( document ).ready(function(){
 
 })
 
+var newWindow;
+
 var onloadCallback = function() {
     if ($("#designerCaptcha").length > 0){
       designerCaptcha = grecaptcha.render( 'designerCaptcha', {
@@ -67,19 +69,19 @@ var submitForm = function(thisForm, captchaID){
         success: function(e) {
             thisForm.find("button[type='submit']").html('submit');
             grecaptcha.reset();
-            thisForm.find('input').last().notify("Thank you for submission!", "success", { position:"center" });
+            thisForm.find('input').last().notify("Thank you for your submission!", "success", { position:"center" });
             thisForm.trigger("reset");
             if(thisForm.hasClass('designer-modal-form')){
-              window.open('http://www.snapsports.com/designer/', '_blank');
+              newWindow.location.href = 'http://www.snapsports.com/designer/';
               }
-            },
-        async: false
+            }
         })
     }
 };
 
 
 $("#homepage-designer-modal button").click(function(e) {
+  newWindow = window.open("","_blank");
   e.preventDefault();
   e.stopImmediatePropagation();
   var thisForm = $(this).parent('form');

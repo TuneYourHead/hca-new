@@ -10,7 +10,7 @@ html(lang='en')
     link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css')
   body
 include ../layouts/header.pug
-section.hero
+section.hero.contact-page-hero
       .hero-topbar.section-wrapper
         p Contact Hours: M-F 8:30AM-5PM, Sat 10:30AM-3PM, Sun Closed
         p
@@ -23,81 +23,80 @@ section.hero
           br
           | whatever you can dream up, we can make it happen.
 section.contact-page
-  .section-wrapper
-    form.contact-page-form.contact-page_quote
-      h3.contact-page-form-title.section-title request a quote
-      p.contact-page-form-subtitle For estimates, please contact us at your convenience. It's an honor to help you make your sports dream a reality. 
-      input(type='hidden', name='formsubject' value='Request a Quote')
-      div
-        input#contact-page-form-name.contact-us-input(type='name', required='', name='name')
-        label(for='contact-page-form-name')
-          | Name 
-          span.label-accent *
-      div
-        input#contact-page-form-email.contact-us-input(type='email', required='', name='email')
-        label(for='contact-page-form-email')
-          | Email
-          span.label-accent *
-      div
-        input#contact-page-form-zipcode.contact-us-input.zip-code(type='text', required='', name="address", maxlength='5')
-        label(for='contact-page-form-zipcode')
-          | Zipcode
-          span.label-accent *
-      div
-        input#contact-page-form-phone.contact-us-input.phone(type="text", name="phone", maxlength='10')
-        label(for='contact-page-form-phone')
-          | Phone
-      div.radio-input-wrapper
-        input#contact-page-form-client_residential.radio-input(type='radio', name='client', value='Residential')
-        label(for='contact-page-form-client_residential')
-          | Residential
-          span.radio-input-check
-        input#contact-page-form-client_commercial.radio-input(type='radio', name='client', value='Commersial')
-        label(for='contact-page-form-client_commercial')
-          | Commersial
-          span.radio-input-check
-      div.radio-input-wrapper
-        input#contact-page-form-court-type_indoor.radio-input(type='radio' name='court-type' value='Indoor')
-        label(for='contact-page-form-court-type_indoor')
-          | Indoor
-          span.radio-input-check
-        input#contact-page-form-court-type_outdoor.radio-input(type='radio' name='court-type' value='Outdoor')
-        label(for='contact-page-form-court-type_outdoor')
-          | Outdoor
-          span.radio-input-check
-      div
-        textarea#contact-page-form-textarea(name='message')
-        label(for='contact-page-form-textarea')
-          | Message
-      .g-recaptcha#quoteCaptcha
-      button.link-button.link-button-lightbg(type='submit')
-        | Submit
-    form.contact-page-form.contact-page_inquiry  
-      h3.contact-page-form-title.section-title general inquiry
-      p.contact-page-form-subtitle Please use the form below for general questions, comments, and feedback. 
-      input(type='hidden', name='formsubject' value='General Inquiry')
-      div
-        input#contact-page-form-name_inquiry.contact-us-input(type='name', required='', name='name')
-        label(for='contact-page-form-name_inquiry')
-          | Name 
-          span.label-accent *
-      div
-        input#contact-page-form-email_inquiry.contact-us-input(type='email', required='', name='email')
-        label(for='contact-page-form-email_inquiry')
-          | Email
-          span.label-accent *
-      div
-        input#contact-page-form-zipcode_inquiry.contact-us-input.zip-code(type='text', required='', name="address", maxlength='5')
-        label(for='contact-page-form-zipcode_inquiry')
-          | Zipcode
-          span.label-accent *
-      div
-        textarea#contact-page-form-textarea_inquiry(name='message')
-        label(for='contact-page-form-textarea_inquiry')
-          | Message
-      .g-recaptcha#inquiryCaptcha
-      button.link-button.link-button-lightbg(type='submit')
-        | Submit
+  form.contact-page-form.contact-page_quote
+    h3.contact-page-form-title.section-title request a quote
+    p.contact-page-form-subtitle For estimates, please contact us at your convenience. It's an honor to help you make your sports dream a reality. 
+    input(type='hidden', name='formsubject' value='Request a Quote')
+    div
+      input#contact-page-form-name.contact-us-input(type='name', required='', name='name')
+      label(for='contact-page-form-name')
+        | Name 
+        span.label-accent *
+    div
+      input#contact-page-form-email.contact-us-input(type='email', required='', name='email')
+      label(for='contact-page-form-email')
+        | Email
+        span.label-accent *
+    div
+      input#contact-page-form-zipcode.contact-us-input.zip-code(type='text', required='', name="address", maxlength='5')
+      label(for='contact-page-form-zipcode')
+        | Zipcode
+        span.label-accent *
+    div
+      input#contact-page-form-phone.contact-us-input.phone(type="text", name="phone", maxlength='10')
+      label(for='contact-page-form-phone')
+        | Phone
+    div.radio-input-wrapper
+      input#contact-page-form-client_residential.radio-input(type='radio', name='client', value='Residential')
+      label(for='contact-page-form-client_residential')
+        | Residential
+        span.radio-input-check
+      input#contact-page-form-client_commercial.radio-input(type='radio', name='client', value='Commersial')
+      label(for='contact-page-form-client_commercial')
+        | Commersial
+        span.radio-input-check
+    div.radio-input-wrapper
+      input#contact-page-form-court-type_indoor.radio-input(type='radio' name='court-type' value='Indoor')
+      label(for='contact-page-form-court-type_indoor')
+        | Indoor
+        span.radio-input-check
+      input#contact-page-form-court-type_outdoor.radio-input(type='radio' name='court-type' value='Outdoor')
+      label(for='contact-page-form-court-type_outdoor')
+        | Outdoor
+        span.radio-input-check
+    div
+      textarea#contact-page-form-textarea(name='message')
+      label(for='contact-page-form-textarea')
+        | Message
+    .g-recaptcha#quoteCaptcha
+    button.link-button.link-button-lightbg(type='submit')
+      | Submit
+  form.contact-page-form.contact-page_inquiry  
+    h3.contact-page-form-title.section-title general inquiry
+    p.contact-page-form-subtitle Please use the form below for general questions, comments, and feedback. 
+    input(type='hidden', name='formsubject' value='General Inquiry')
+    div
+      input#contact-page-form-name_inquiry.contact-us-input(type='name', required='', name='name')
+      label(for='contact-page-form-name_inquiry')
+        | Name 
+        span.label-accent *
+    div
+      input#contact-page-form-email_inquiry.contact-us-input(type='email', required='', name='email')
+      label(for='contact-page-form-email_inquiry')
+        | Email
+        span.label-accent *
+    div
+      input#contact-page-form-zipcode_inquiry.contact-us-input.zip-code(type='text', required='', name="address", maxlength='5')
+      label(for='contact-page-form-zipcode_inquiry')
+        | Zipcode
+        span.label-accent *
+    div
+      textarea#contact-page-form-textarea_inquiry(name='message')
+      label(for='contact-page-form-textarea_inquiry')
+        | Message
+    .g-recaptcha#inquiryCaptcha
+    button.link-button.link-button-lightbg(type='submit')
+      | Submit
 include ../layouts/partners.pug
 include ../layouts/footer.pug
 include ../layouts/designer-modal.pug
