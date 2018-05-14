@@ -1,5 +1,16 @@
 $( document ).ready(function(){
 
+  var highlightCurrentPage = function(){
+    //get current location to highlight header links
+      var current = window.location.href;
+      var parts = window.location.href.split('/');
+      var lastSegment = parts.pop() || parts.pop();
+      $('.header-nav-item a[href$="https://homecourtadvantage.net/devsite/'+lastSegment+'"]').parent('.header-nav-item').addClass('header-nav-item_active');
+      $('.footer-nav-list-item a[href$="https://homecourtadvantage.net/devsite/'+lastSegment+'"]').parent('.footer-nav-list-item').addClass("footer-nav-list-item_active");
+      $('.header-nav-item a[href$="https://homecourtadvantage.net/'+lastSegment+'"]').parent('.header-nav-item').addClass('header-nav-item_active');
+      $('.footer-nav-list-item a[href$="https://homecourtadvantage.net/'+lastSegment+'"]').parent('.footer-nav-list-item').addClass("footer-nav-list-item_active");
+  }
+
   var labelAnimation = function() {
       $("input, textarea").on("focusin", function() {}, function() {
           $(this).addClass("active");
@@ -22,6 +33,7 @@ $( document ).ready(function(){
     $('.phone').mask('(000) 000-0000');
   };
 
+  highlightCurrentPage();
   labelAnimation();
   maskInputs();
 
@@ -73,6 +85,7 @@ var submitForm = function(thisForm, captchaID){
             thisForm.trigger("reset");
             if(thisForm.hasClass('designer-modal-form')){
               newWindow.location.href = 'http://www.snapsports.com/designer/';
+              $('.designer-modal-hidden-link').show();
               }
             }
         })

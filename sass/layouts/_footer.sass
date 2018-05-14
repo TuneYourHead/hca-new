@@ -16,6 +16,13 @@
   align-items: center
   padding: $global-padding/2 0
   border-bottom: 1px solid rgba(51,51,51,.5)
+  flex-wrap: wrap
+  @media(max-width: 600px)
+    font-size: 10px
+    line-height: 2
+    p
+      flex-basis: 100%
+      text-align: center
   a
     margin-left: 23px
     color: $accent
@@ -36,11 +43,18 @@
   display: block
   max-width: 100%
   width: 220px
+  @media(max-width: 600px)
+    margin: 0 auto
+
 
 .footer-nav-list
   display: inline-block
   vertical-align: top
   margin: $global-margin $global-margin $global-margin 0
+  @media(max-width: 600px)
+    text-align: center
+    width: 100%
+    margin: $global-margin/2 0 $global-margin/2 0
 
 .footer-nav-list-item
   list-style: none
@@ -74,16 +88,27 @@
     flex-basis: 50%
     &.footer-info_showroom
       border-left: none
+  @media(max-width: 600px)
+    flex-basis: 100%
+    text-align: center
+    border-left: none
+    padding: $global-padding 0
+
 
 .footer-info-text
   flex-grow: 1
   max-width: 60%
   font-size: 1.28rem
+  @media(max-width: 600px)
+    max-width: 100%
+    font-size: 1rem
 
 .footer-info-title
   font-size: 1.7rem
   max-width: 60%
   text-transform: uppercase
+  @media(max-width: 600px)
+    max-width: 100%
 
 .footer-map-link
   display: block
@@ -96,16 +121,31 @@
   &:hover
     color: $accent
     text-decoration: underline
+  @media(max-width: 600px)
+    max-width: 100%
+    text-align: center
+    font-size: 10px
+    line-height: 2
+    margin: 0 auto
 
 
 .footer-link-button
   display: inline-block
   margin-left: 0
+  @media(max-width: 600px)
+    max-width: 100%
+    margin: 30px auto 0
 
 .footer-copyright
   display: inline-block
   font-weight: 400
   font-size: 12px
+  @media(max-width: 600px)
+    text-align: center
+
+.footer-links
+  @media(max-width: 600px)
+    text-align: center
 
 .footer-links-item
   display: inline-block
@@ -124,8 +164,18 @@
     content: ""
   &:hover
     text-decoration: underline
+  @media(max-width: 600px)
+    text-align: center
+    &:first-of-type
+      margin-left: 0
+      &:before
+        display: none
 
 .footer-nav-map-link
   position: absolute
   bottom: $global-padding
   left: 0
+  @media(max-width: 600px)
+    position: static
+    text-align: center
+    margin: 0 auto

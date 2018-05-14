@@ -2,6 +2,8 @@
   padding: 0 $global-padding
   color: $white
   text-shadow: 3px 3px 3px rgba(0,0,0,.35)
+  @media(max-width: 600px)
+    padding: 0
 
 .what-we-do_main
   display: flex
@@ -20,6 +22,9 @@
   flex-direction: column
   padding: 7% $global-padding
   margin-top: $global-padding
+  @media(max-width: 600px)
+    margin-top: $global-padding/2
+    padding: 20% $global-padding
   background:
     size: cover
     repeat: no-repeat
@@ -84,6 +89,9 @@
   @media(max-width: $lg-max-width)
     flex-basis: 100%
     max-height: 400px
+  @media(max-width: 600px)
+    margin-top: $global-padding/2
+    padding: 20% $global-padding
 
 .what-we-do_secondary-text
   flex-grow: 1
@@ -96,6 +104,8 @@
 .what-we-do_portfolio
   flex-basis: 100%
   padding-top: $global-padding
+  @media(max-width: 600px)
+    padding-top: $global-padding/2
 
 .what-we-do_portfolio-item
   background-color: #ccc
@@ -112,6 +122,9 @@
     background-image: $gradient, url('../images/what-we-do-bg-6.jpg')
   @media(max-width: $lg-max-width)
     max-height: 400px
+  @media(max-width: 600px)
+    padding: 20% $global-padding
+    margin-bottom: $global-padding/2
 
 .what-we-do_portfolio-text
   font-size: 1.125rem

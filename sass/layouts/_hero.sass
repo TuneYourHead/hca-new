@@ -24,6 +24,11 @@
   border-bottom: 1px solid rgba(255,255,255,.5)
   p
     display: inline-block
+    @media(max-width: 800px)
+      margin: 0 auto
+      text-align: center
+      line-height: 2
+      font-size: 10px
     a
       color: $white
       margin-left: 23px
@@ -41,6 +46,8 @@
   color: $white
   text-shadow: 3px 3px 3px rgba(0,0,0,.35)
   min-width: 60%
+  @media(max-width: 600px)
+    min-width: 90%
 
 .hero-center-title
   text-transform: uppercase
@@ -49,6 +56,8 @@
   font-size: 1.125rem
   line-height: 1.4
   font-weight: 300
+  @media(max-width: 600px)
+    font-size: 1rem
 
 .hero-center-btn
   display: block

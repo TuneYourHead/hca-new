@@ -1,0 +1,83 @@
+.residential-page-hero
+  background-image: $gradient, url('../images/what-we-do-bg-1.jpg')
+  background-position: center
+
+.residential-icons
+  display: flex
+  justify-content: center
+  padding: $global-margin/2 0
+
+.residential-icon-item
+  margin-right: $global-margin
+  &:hover
+    .residential-icon
+      fill: $accent
+
+.residential-icon
+  display: block
+  margin: 0 auto
+  width: 45px
+  height: auto
+  max-width: 100%
+  transition: all 0.3s ease-in-out
+
+.residential-icon-title
+  display: block
+  text-align: center
+
+
+.residential-icon-title
+  margin: 5px 0 0
+  font-size: 12px
+
+.residential-page
+  display: flex
+  flex-wrap: wrap
+  justify-content: space-between
+  padding: $global-padding
+  @media(max-width: $lg-max-width)
+    padding: 0
+
+.residential-page-item
+  flex-basis: calc(50% - 6.5px)
+  background-color: #ccc
+  text-align: center
+  color: $white
+  height: calc(100vh - 26px)
+  max-height: 600px
+  display: flex
+  justify-content: space-between
+  flex-direction: column
+  padding: 7% $global-padding
+  @media(max-width: 600px)
+    margin-top: $global-padding/2
+    padding: 20% $global-padding
+  background:
+    size: cover
+    repeat: no-repeat
+    position: center
+  &:nth-of-type(1)
+    background-image: $gradient, url('../images/residential/residential-page-item-1.jpg')
+  &:nth-of-type(2)
+    background-image: $gradient, url('../images/residential/residential-page-item-2.jpg')
+  @media(max-width: $lg-max-width)
+    flex-basis: 100%
+    max-height: 600px
+    &:last-of-type
+      margin-top: $global-padding/2
+
+.residential-page-item-text
+  flex-grow: 1
+  font-size: 1.125rem
+  line-height: 1.4
+  max-width: 700px
+  margin: 0 auto
+  font-weight: 300
+
+.residential-page-item-title
+  text-transform: uppercase
+
+.residential-page-item-subtitle
+  text-transform: uppercase
+  font-size: 1.125rem
+  line-height: 1.4

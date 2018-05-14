@@ -36,13 +36,14 @@ $mail->Password = 'imdeveloper1';                           // SMTP password
 $mail->SMTPSecure = 'tls';                            // Enable TLS encryption, `ssl` also accepted
 $mail->Port = 587;                                    // TCP port to connect to
 
-$mail->setFrom('from@example.com', 'Home Court Advantage web site');
-$mail->addAddress('tuneyourhead@gmail.com');   // Add a recipient             // Name is optional
+$mail->setFrom('nate@homecourtadvantage.net', 'Home Court Advantage');
+$mail->addAddress('simon@elevatecg.com');
+$mail->addAddress('nate@homecourtadvantage.net');    // Add a recipient             // Name is optional
 $mail->addReplyTo('sergey@elevatecg.com', 'Information');
 
 $mail->isHTML(true);                                  // Set email format to HTML
 
-$mail->Subject = 'Court Advantage site | '.$formsubject;
+$mail->Subject = 'Home Court Advantage | '.$formsubject;
 $mail->Body    = $body;
 
 if(!$mail->send()) {

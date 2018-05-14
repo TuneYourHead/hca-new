@@ -37,13 +37,14 @@
     padding: 100px $global-padding
     transition: all 0.3s ease-in-out
     opacity: 0
+    display: block
 
 
 .header-nav-item
   display: inline-block
-  padding-right: 20px
+  margin-right: 20px
   &:last-of-type
-    padding-right: 0px
+    margin-right: 0px
   a
     font-size: 1rem
   @media(max-width: $lg-max-width)
@@ -51,6 +52,21 @@
     width: 100%
     text-align: center
     margin: $global-margin auto 0
+    padding: 0
+
+.header-nav-item_active
+  position: relative
+  &:after
+    position: absolute
+    bottom: -2px
+    width: 100%
+    height: 1px
+    left: 0
+    background-color: $black
+    content: ""
+    @media(max-width: $lg-max-width)
+      display: none
+
 
 .header-nav-btn
   display: none

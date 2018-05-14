@@ -42,10 +42,15 @@
     position: center
     size: contain
   cursor: pointer
+  @media(max-width: 425px)
+    top: $global-padding
+    right: $global-padding
 
 .designer-modal-title
   line-height: 1
   text-transform: uppercase
+  @media(max-width: 425px)
+    margin-top: 20px
 
 .designer-modal-subtitle
   text-transform: uppercase
@@ -54,7 +59,21 @@
   line-height: 1.4
   font-weight: 400
   margin: $global-margin auto
+  @media(max-width: 425px)
+    font-size: 1rem
+    margin: $global-margin/2 auto $global-margin
 
 
 .designer-modal-input_submit
   margin-top: $global-padding*2
+
+
+.designer-modal-hidden-link
+  display: none
+  text-align: center
+  margin: $global-margin auto
+  font-size: 14px
+  a
+    color: $accent
+    &:hover
+      text-decoration: underline

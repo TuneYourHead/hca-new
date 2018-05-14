@@ -6,6 +6,8 @@
   justify-content: space-between
   .g-recaptcha
     margin-bottom: $global-margin
+  @media(max-width: 600px)
+    padding: 0
 
 .contact-page-form
   flex-basis: calc(50% - 6.5px)
@@ -18,8 +20,8 @@
     flex-basis: 100%
     &:first-of-type
       border-bottom: 1px solid rgba(51,51,51,.5)
-  @media(max-width: 400px)
-    padding: 30px 5%
+  @media(max-width: 600px)
+    padding: 15px 0
 
 .contact-page-hero
   background-image: $gradient, url('../images/what-we-do-bg-1.jpg')
@@ -30,9 +32,13 @@
   font-size: 2.2rem
   display: inline-block
   margin-bottom: $global-margin
+  @media(max-width: 600px)
+    font-size: 1.7rem
 
 .contact-page-form-subtitle
   font-size: 1.2rem
   line-height: 1.4
   max-width: 80%
   margin: 0 auto $global-margin
+  @media(max-width: 600px)
+    font-size: 1rem
