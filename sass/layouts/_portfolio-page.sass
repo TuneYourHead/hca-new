@@ -1,0 +1,89 @@
+@for $i from 1 through 12
+    .portfolio-list-item
+      &:nth-of-type(#{$i})
+        background-image: url("../images/portfolio/thumbnail/portfolio-image-#{$i}.jpg")
+
+.portfolio-page
+  display: flex
+  justify-content: space-between
+  padding: $global-padding
+  @media(max-width: $lg-max-width)
+    flex-wrap: wrap
+  @media(max-width: 600px)
+    padding: $global-padding/2 0
+
+.portfolio-filter
+  flex-basis: 20%
+  text-align: center
+  padding-right: $global-padding
+  @media(max-width: $lg-max-width)
+    flex-basis: 100%
+    order: 1
+  @media(max-width: 600px)
+    padding: $global-padding/2
+
+.portfolio-filter-item
+  @media(max-width: $lg-max-width)
+    display: inline-block
+    margin-right: 15px
+
+.portfolio-filter-title
+  text-transform: uppercase
+  margin-top: 0
+  line-height: 1
+  padding-top: 0
+  margin-bottom: $global-margin
+
+.portfolio-list
+  flex-basis: 80%
+  list-style: none
+  display: flex
+  justify-content: space-between
+  padding: 0
+  flex-wrap: wrap
+  .blog-posts-pagination
+    margin-top: $global-padding
+  @media(max-width: $lg-max-width)
+    flex-basis: 100%
+    order: 2
+
+.portfolio-list-item
+  flex-basis: calc(33.333% - 9px)
+  margin-bottom: $global-padding
+  height: 300px
+  background:
+    size: cover
+    position: center
+    repeat: no-repeat
+  @media(max-width: $lg-max-width)
+    flex-basis: calc(50% - 6.5px)
+  @media(max-width: 600px)
+    flex-basis: 100%
+    margin-bottom: $global-padding/2
+
+.portfolio-filter-item
+  margin-bottom: 15px
+
+.fancybox-button--close
+  background-color: transparent
+  .designer-modal-close
+    top: 13px
+    right: 13px
+.fancybox-navigation .fancybox-button--arrow_left
+  background-color: transparent
+  left: 13px!important
+  padding: 0!important
+  svg
+    fill: $accent!important
+    enable-background: accumulate!important
+.fancybox-navigation .fancybox-button--arrow_right
+  background-color: transparent
+  right: 13px!important
+  padding: 0!important
+  color: $accent
+  opacity: 1
+
+.fancybox-button, .fancybox-button:link, .fancybox-button:visited
+  color: $accent!important
+  opacity: 1!important
+  visibility: visible!important

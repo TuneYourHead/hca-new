@@ -26,15 +26,12 @@
     border-right: 1px solid rgba(51,51,51,.5)
   @media(max-width: $lg-max-width)
     flex-basis: 100%
-    margin-top: $global-margin
     &:first-of-type
-      padding-bottom: $global-margin
       border-bottom: 1px solid rgba(51,51,51,.5)
       border-right: none
-      margin-top: 0
   @media(max-width: 600px)
     margin-top: 0
-    padding: $global-padding
+    padding: $global-padding*2 $global-padding
 
 .contact-us-item-text
   width: 400px
@@ -47,7 +44,7 @@
 
 .contact-us_residential
   display: flex
-  justify-content: space-between
+  justify-content: space-around
   padding: 0
   .contact-us-item-text
     width: 70%

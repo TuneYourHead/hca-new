@@ -8,9 +8,10 @@ html(lang='en')
     link(rel='stylesheet', href='../css/main.css')
     link(href='https://fonts.googleapis.com/css?family=Black+Ops+One|Lato:100,300,400,700', rel='stylesheet')
     link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css')
+    link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.css')
   body
 include ../layouts/header.pug
-section.residential-icons.residential-indoor-icons
+section.residential-icons.residential-indoor-icons.hidden-content
   a(href="").residential-icon-item.residential-indoor-icon-item
     svg(xmlns='http://www.w3.org/2000/svg', viewbox='0 0 64 64').residential-icon.residential-icon_outdoor
       path(d='M55 0H9a1 1 0 0 0-1 1v62c0 .6.4 1 1 1h46c.6 0 1-.4 1-1V1c0-.6-.4-1-1-1zM34.5 10c0 1.2-1.1 2.3-2.5 2.3s-2.5-1.1-2.5-2.4l.1-.7h4.8l.1.7zm-9-3V2h13v5h-13zm-2-5v6c0 .6.4 1 1 1h3.1l-.1 1c0 2.3 2 4.3 4.5 4.3s4.5-2 4.5-4.4l-.1-.9h3.2c.5 0 1-.4 1-1V2H54v28.2H42a10 10 0 0 0-20 0H10V2h13.4zm.6 28.2a8 8 0 0 1 15.8 0H24.1zm15.8 2a8 8 0 0 1-15.8 0h15.8zM29.5 53.8c0-1.3 1.1-2.3 2.5-2.3s2.5 1 2.5 2.3l-.1.7h-4.8l-.1-.7zm9 3v5h-13v-5h13zm2 5.2v-6.3c0-.5-.4-1-1-1h-3.1l.1-.9c0-2.4-2-4.3-4.5-4.3s-4.5 2-4.5 4.3l.1 1h-3.2a1 1 0 0 0-1 1V62H10V32.2h12a10 10 0 0 0 20 0h12V62H40.6z')
@@ -51,9 +52,9 @@ section.hero.residential-indoor-page-hero
     p.hero-center-subtitle
       | OUTDOOR COURTS FOR YEAR-ROUND FAMILY FUN
     p.hero-center-subtitle
-      | Cost effective modular floors, wood floors, vinyl floors, hoops, wall padding, custom logos,
+      | Cost effective modular floors, vinyl floors, hoops, wall padding, custom logos,
       br
-      | nets, lockers, and anything else to make your indoor court the envy of the neighborhood.
+      | nets, lockers, and anything else to make your outdoor court the envy of the neighborhood.
 section.residential-indoor-page
   .residential-indoor-page-item.residential-indoor-page-item_outdoor
     h3.residential-indoor-page-item-title.section-title
@@ -62,7 +63,7 @@ section.residential-indoor-page
       | All-In-One Courts For All Your Needs
     p.residential-indoor-page-item-text
       | From basketball to tennis, hopscotch to shuffleboard—play all your favorite sports with ease on one court.
-    a.link-button.residential-indoor-page-item-btn.link-button-lightbg
+    a.link-button.residential-indoor-page-item-btn.link-button-lightbg.hidden-content
       | Explore
   .residential-indoor-page-item.residential-indoor-page-item_outdoor
     h3.residential-indoor-page-item-title.section-title
@@ -71,7 +72,7 @@ section.residential-indoor-page
       | With Our Help, Your Hoop Dreams Become Realities
     p.residential-indoor-page-item-text
       | Choose from high quality flooring, hoops, scoreboards, and more to make your home court a slam dunk.
-    a.link-button.residential-indoor-page-item-btn.link-button-lightbg
+    a.link-button.residential-indoor-page-item-btn.link-button-lightbg.hidden-content
       | Explore
   .residential-indoor-page-item.residential-indoor-page-item_outdoor
     h3.residential-indoor-page-item-title.section-title
@@ -80,7 +81,7 @@ section.residential-indoor-page
       | Hockey Rinks That Will Score Your Neighbors’ Envy
     p.residential-indoor-page-item-text
       | Handpick flooring, goals, scoreboards, and more to bring the hockey rink of your dreams to life.
-    a.link-button.residential-indoor-page-item-btn.link-button-lightbg
+    a.link-button.residential-indoor-page-item-btn.link-button-lightbg.hidden-content
       | Explore
   .residential-indoor-page-item.residential-indoor-page-item_outdoor
     h3.residential-indoor-page-item-title.section-title
@@ -89,7 +90,7 @@ section.residential-indoor-page
       | Build A Home Court For Your Favorite Racquet Sport
     p.residential-indoor-page-item-text
       | Create a top-of-the-line court for tennis, badminton, pickleball, squash, and more. Whatever your sport, we have the court.
-    a.link-button.residential-indoor-page-item-btn.link-button-lightbg
+    a.link-button.residential-indoor-page-item-btn.link-button-lightbg.hidden-content
       | Explore
   .residential-indoor-page-item.residential-indoor-page-item_outdoor
     h3.residential-indoor-page-item-title.section-title
@@ -98,7 +99,7 @@ section.residential-indoor-page
       | High-Performance Batting Cages At Home
     p.residential-indoor-page-item-text
       | Swing, batter, batter… Pitching machines, turf, and more, we’ll bring the excitement of batting practice to the comfort of home.
-    a.link-button.residential-indoor-page-item-btn.link-button-lightbg
+    a.link-button.residential-indoor-page-item-btn.link-button-lightbg.hidden-content
       | Explore
   .residential-indoor-page-item.residential-indoor-page-item_outdoor
     h3.residential-indoor-page-item-title.section-title
@@ -106,11 +107,11 @@ section.residential-indoor-page
     p.residential-indoor-page-item-subtitle
       | Bring The Soccer Field To Your Home
     p.residential-indoor-page-item-text
-      | Turf, wall padding, goals, and everything else you need to have soccer practice safely right in your home!
-    a.link-button.residential-indoor-page-item-btn.link-button-lightbg
+      | Turf, wall padding, goals, and everything else you need to have soccer practice safely right in your backyard!
+    a.link-button.residential-indoor-page-item-btn.link-button-lightbg.hidden-content
       | Explore
 section.contact-us.contact-us_residential
-  .contact-us-item
+  .contact-us-item.hidden-content
     h3.contact-us-item-title.section-title Interested in Commercial Courts?
     p.contact-us-item-text
       | We specialize in high performance flooring and accessories to handle your high traffic commercial needs. No project is too large.
@@ -130,5 +131,7 @@ script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js')
 script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js')
 script(src='https://tuneyourhead.github.io/hca-new/js/mab-popup.js')
 script(src='https://cdnjs.cloudflare.com/ajax/libs/notify/0.4.2/notify.min.js')
+script(src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.3.5/jquery.fancybox.min.js")
 script(src='https://homecourtadvantage.net/devsite/js/main.js')
 script(src='https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit')
+script(src='https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js')

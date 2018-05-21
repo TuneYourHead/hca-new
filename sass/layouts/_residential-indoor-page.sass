@@ -5,17 +5,20 @@
         background-image: url("../images/residential/indoor/indoor-item-bg-#{$i}.jpg")
 
 .residential-indoor-icons
-  background-color: #dedede
+  background-color: #f0f0f0
   flex-wrap: wrap
   @media(max-width: $lg-max-width)
     justify-content: space-between
-    padding: $global-padding*2 $global-padding $global-padding
+    padding: $global-padding*2 $global-padding*2 $global-padding
 
 .residential-indoor-icon-item
   @media(max-width: $lg-max-width)
-    margin-right: 0
+    padding-right: 2.5vw
     margin-bottom: $global-margin/2
-    flex-basis: 33%
+    &:last-of-type
+      margin-right: 0
+      padding-right: 0
+
 
 .residential-indoor-page-hero
   background-image: none
@@ -34,7 +37,8 @@
   flex-wrap: wrap
   justify-content: space-between
   padding: $global-padding
-  @media(max-width: $lg-max-width)
+  margin-bottom: $global-padding
+  @media(max-width: 600px)
     padding: 0
 
 .residential-indoor-page-item
@@ -70,8 +74,10 @@
     flex-basis: 100%
     padding: 250px $global-padding $global-padding*2
     text-align: center
-    height: calc(250px + 40vh - 26px)
+    height: calc(250px + 25vh - 26px)
     min-height: fit-content
+  @media(max-width: 600px)
+    margin: $global-padding/2 0 0
 
 .residential-indoor-page-item-title
   text-transform: uppercase
@@ -96,3 +102,24 @@
   margin-left: 0
   @media(max-width: $lg-max-width)
     margin-left: auto
+
+.residential-indoor-icons_prev
+  position: absolute
+  top: calc(50% - 10px)
+  left: $global-padding
+  height: 20px
+  width: 20px
+  cursor: pointer
+  svg
+    fill: $accent
+
+
+.residential-indoor-icons_next
+  position: absolute
+  top: calc(50% - 10px)
+  right: $global-padding
+  height: 20px
+  width: 20px
+  cursor: pointer
+  svg
+    fill: $accent
